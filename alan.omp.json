@@ -86,7 +86,7 @@
           "powerline_symbol": "\ue0b6",
           "properties": {
             "style": "amarillo",
-            "threshold": 0
+            "threshold": 2
           },
           "style": "diamond",
           "template": " {{ if gt .Ms 0 }}{{ .FormattedMs }} \uf252{{ end }}",
