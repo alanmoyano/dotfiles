@@ -74,7 +74,7 @@
           "properties": {
             "always_enabled": true
           },
-          "style": "{{ if gt .Segments.Executiontime.Ms 0}}powerline{{ else }}diamond{{ end }}",
+          "style": "{{ if .Segments.Executiontime.Ms }}powerline{{ else }}diamond{{ end }}",
           "template": " {{ if gt .Code 0 }}{{ .Code }}{{ else }}\uf00c{{ end }} ",
           "trailing_diamond": "\ue0b4",
           "type": "status"
