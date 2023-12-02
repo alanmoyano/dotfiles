@@ -3,6 +3,7 @@
   "blocks": [
     {
       "alignment": "left",
+      "overflow": "break",
       "segments": [
         {
           "background": "p:blue",
@@ -90,7 +91,7 @@
       "type": "rprompt"
     }
   ],
-  "console_title_template": "{{if .Root}} ⚡ {{end}}{{.UserName}} ➔ 📁{{.Folder}}",
+  "console_title_template": "{{if .Root}}⚡ {{end}}{{.UserName}} ➔ 📁{{.Folder}}",
   "final_space": true,
   "palette": {
     "blue": "#8AADF4",
