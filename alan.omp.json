@@ -45,6 +45,7 @@
           "foreground": "#011627",
           "powerline_symbol": "\ue0b4",
           "properties": {
+            "branch_gone_icon": "\uf4ad",
             "branch_icon": "\ue725 ",
             "branch_identical_icon": "",
             "fetch_stash_count": true,
@@ -67,24 +68,29 @@
           "background": "p:lavender",
           "background_templates": ["{{ if gt .Code 0 }}p:red{{end}}"],
           "foreground": "p:wight",
+          "invert_powerline": true,
           "leading_diamond": "\ue0b6",
+          "powerline_symbol": "\ue0b6",
           "properties": {
             "always_enabled": true
           },
-          "style": "diamond",
+          "style": "{{ if gt .Segments.Executiontime.Ms 0}}powerline{{ else }}diamond{{ end }}",
           "template": " {{ if gt .Code 0 }}{{ .Code }}{{ else }}\uf00c{{ end }} ",
+          "trailing_diamond": "\ue0b4",
           "type": "status"
         },
         {
-          "background": "#575656",
+          "background": "p:grey",
           "foreground": "p:wight",
-          "powerline_symbol": "\ue0b4",
+          "invert_powerline": true,
+          "powerline_symbol": "\ue0b6",
           "properties": {
             "style": "amarillo",
             "threshold": 0
           },
-          "style": "powerline",
-          "template": " {{ .FormattedMs }} \uf252",
+          "style": "diamond",
+          "template": " {{ if gt .Ms 0 }}{{ .FormattedMs }} \uf252{{ end }}",
+          "trailing_diamond": "\ue0b4",
           "type": "executiontime"
         }
       ],
@@ -95,6 +101,7 @@
   "final_space": true,
   "palette": {
     "blue": "#8AADF4",
+    "grey": "#8B8989",
     "lavender": "#B7BDF8",
     "os": "#ACB0BE",
     "pink": "#F5BDE6",
