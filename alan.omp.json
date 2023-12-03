@@ -48,6 +48,14 @@
           "style": "powerline",
           "template": " {{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Staging.Changed }} {{ .Staging.String }}{{ end }}{{ if .Working.Changed }} {{ .Working.String }}{{ end }} ",
           "type": "git"
+        },
+        {
+          "background": "p:os",
+          "foreground": "p:wight",
+          "powerline_symbol": "\ue0b4",
+          "style": "powerline",
+          "template": " \uf120",
+          "type": "text"
         }
       ],
       "type": "prompt"
