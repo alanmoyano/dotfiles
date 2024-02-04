@@ -6,56 +6,43 @@
       "overflow": "break",
       "segments": [
         {
-          "background": "p:blue",
-          "foreground": "p:wight",
-          "leading_diamond": "",
-          "powerline_symbol": "",
-          "style": "diamond",
-          "template": " {{ .Icon }} ",
-          "type": "os"
-        },
-        {
-          "background": "p:pink",
-          "foreground": "p:text",
-          "powerline_symbol": "",
+          "background": "p:path",
+          "foreground": "p:text-dark",
+          "leading_diamond": "\ue0b6",
           "properties": {
             "home_icon": "~",
+            "mapped_locations": {
+              "\\\\wsl.localhost\\Ubuntu\\": "Ubuntu"
+            },
             "style": "full"
           },
-          "style": "powerline",
+          "style": "diamond",
           "template": " \uf07b {{ .Path }} ",
+          "trailing_diamond": "\ue0b4",
           "type": "path"
         },
         {
           "background": "#addb67",
           "background_templates": [
-            "{{ if or (.Working.Changed) (.Staging.Changed) }}#e4cf6a{{ end }}",
-            "{{ if and (gt .Ahead 0) (gt .Behind 0) }}#f78c6c{{ end }}",
+            "{{ if or (.Working.Changed) (.Staging.Changed) }}p:git-changed{{ end }}",
+            "{{ if and (gt .Ahead 0) (gt .Behind 0) }}p:git-1{{ end }}",
             "{{ if gt .Ahead 0 }}#C792EA{{ end }}",
             "{{ if gt .Behind 0 }}#c792ea{{ end }}"
           ],
           "foreground": "#011627",
-          "powerline_symbol": "",
           "properties": {
             "branch_gone_icon": "\uf4ad",
-            "branch_icon": " ",
+            "branch_icon": "\ue725 ",
             "branch_identical_icon": "",
             "fetch_stash_count": true,
             "fetch_status": true,
             "fetch_upstream_icon": true,
             "fetch_worktree_count": true
           },
-          "style": "powerline",
+          "style": "diamond",
           "template": " {{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Staging.Changed }} {{ .Staging.String }}{{ end }}{{ if .Working.Changed }} {{ .Working.String }}{{ end }} ",
+          "trailing_diamond": "\ue0b4",
           "type": "git"
-        },
-        {
-          "background": "p:os",
-          "foreground": "p:wight",
-          "powerline_symbol": "",
-          "style": "powerline",
-          "template": " \uf120",
-          "type": "text"
         }
       ],
       "type": "prompt"
@@ -65,34 +52,32 @@
       "overflow": "break",
       "segments": [
         {
-          "background": "p:lavender",
+          "background": "p:status",
           "background_templates": [
             "{{ if gt .Code 0 }}p:red{{end}}"
           ],
-          "foreground": "p:wight",
+          "foreground": "p:text-light",
           "invert_powerline": true,
-          "leading_diamond": "",
-          "powerline_symbol": "",
+          "leading_diamond": "\ue0b6",
           "properties": {
             "always_enabled": true
           },
-          "style": "{{ if .Segments.Executiontime.Ms }}powerline{{ else }}diamond{{ end }}",
+          "style": "diamond",
           "template": " {{ if gt .Code 0 }}{{ .Code }}{{ else }}\uf00c{{ end }} ",
-          "trailing_diamond": "",
+          "trailing_diamond": "\ue0b4",
           "type": "status"
         },
         {
-          "background": "p:grey",
-          "foreground": "p:wight",
+          "background": "p:time",
+          "foreground": "p:text-light",
           "invert_powerline": true,
-          "powerline_symbol": "",
           "properties": {
             "style": "amarillo",
             "threshold": 2
           },
           "style": "diamond",
           "template": " {{ .FormattedMs }} \uf252",
-          "trailing_diamond": "",
+          "trailing_diamond": "\ue0b4",
           "type": "executiontime"
         }
       ],
@@ -102,14 +87,16 @@
   "console_title_template": "{{ if .Root }}⚡ {{ end }}{{ .UserName }} ➔ 📁{{ .Folder }}",
   "final_space": true,
   "palette": {
-    "blue": "#8AADF4",
-    "grey": "#8B8989",
-    "lavender": "#B7BDF8",
-    "os": "#ACB0BE",
-    "pink": "#F5BDE6",
-    "red": "#FF6961",
-    "text": "#494D64",
-    "wight": "#FFFFFF"
+    "git-1": "#f78c6c",
+    "git-2": "#c792ea",
+    "git-3": "#C792EA",
+    "git-changed": "#F2DDA4",
+    "path": "#C6ACDD",
+    "red": "#f55c54",
+    "status": "#6c4f75",
+    "text-dark": "#494D64",
+    "text-light": "#fcf5f5",
+    "time": "#B2A5BD"
   },
   "version": 2
 }
