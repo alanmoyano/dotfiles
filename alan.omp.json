@@ -72,7 +72,7 @@
           "invert_powerline": true,
           "properties": {
             "style": "amarillo",
-            "threshold": 2
+            "threshold": 5
           },
           "style": "diamond",
           "template": " {{ .FormattedMs }} \uf252",
@@ -89,8 +89,8 @@
     "git-changed": "#F2E5A5",
     "git-conflict": "#F78C6C",
     "git-nice": "#D7F2A5",
-    "git-remote": "#C792EA",
-    "path": "#C6ACDD",
+    "git-remote": "#b6a5f2",
+    "path": "#ddacd5",
     "red": "#F55C54",
     "status": "#CA9BE9",
     "text-dark": "#011627",
