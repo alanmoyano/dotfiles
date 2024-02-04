@@ -87,10 +87,10 @@
   "console_title_template": "{{ if .Root }}⚡ {{ end }}{{ .UserName }} ➔ 📁{{ .Folder }}",
   "final_space": true,
   "palette": {
+    "git-conflict": "#f78c6c",
     "git-2": "#c792ea",
     "git-3": "#C792EA",
     "git-changed": "#F2DDA4",
-    "git-conflict": "#f78c6c",
     "path": "#C6ACDD",
     "red": "#f55c54",
     "status": "#6c4f75",
@@ -98,6 +98,5 @@
     "text-light": "#fcf5f5",
     "time": "#B2A5BD"
   },
-  "version": 2,
-  "pepe": "si"
+  "version": 2
 }
