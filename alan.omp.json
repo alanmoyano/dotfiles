@@ -49,7 +49,6 @@
     },
     {
       "alignment": "right",
-      "overflow": "break",
       "segments": [
         {
           "background": "p:status",
@@ -87,16 +86,16 @@
   "console_title_template": "{{ if .Root }}⚡ {{ end }}{{ .UserName }} ➔ 📁{{ .Folder }}",
   "final_space": true,
   "palette": {
-    "git-changed": "#F2DDA4",
-    "git-conflict": "#f78c6c",
-    "git-nice": "#addb67",
-    "git-remote": "#c792ea",
+    "git-changed": "#F2E5A5",
+    "git-conflict": "#F78C6C",
+    "git-nice": "#D7F2A5",
+    "git-remote": "#C792EA",
     "path": "#C6ACDD",
-    "red": "#f55c54",
-    "status": "#ca9be9",
+    "red": "#F55C54",
+    "status": "#CA9BE9",
     "text-dark": "#011627",
-    "text-light": "#fcf6f6",
-    "time": "#8e819c"
+    "text-light": "#FCF6F6",
+    "time": "#8E819C"
   },
   "version": 2
 }
