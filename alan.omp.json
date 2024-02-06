@@ -6,9 +6,17 @@
       "overflow": "break",
       "segments": [
         {
-          "background": "p:path",
+          "background": "p:os",
           "foreground": "p:text-dark",
           "leading_diamond": "\ue0b6",
+          "style": "diamond",
+          "template": " {{ .Icon }} ",
+          "trailing_diamond": "\ue0b4",
+          "type": "os"
+        },
+        {
+          "background": "p:path",
+          "foreground": "p:text-dark",
           "properties": {
             "home_icon": "~",
             "mapped_locations": {
@@ -56,7 +64,6 @@
             "{{ if gt .Code 0 }}p:red{{end}}"
           ],
           "foreground": "p:text-light",
-          "invert_powerline": true,
           "leading_diamond": "\ue0b6",
           "properties": {
             "always_enabled": true
@@ -69,7 +76,6 @@
         {
           "background": "p:time",
           "foreground": "p:text-light",
-          "invert_powerline": true,
           "properties": {
             "style": "amarillo",
             "threshold": 5
@@ -83,14 +89,15 @@
       "type": "rprompt"
     }
   ],
-  "console_title_template": "{{ if .Root }}⚡ {{ end }}{{ .UserName }} ➔ 📁{{ .Folder }}",
+  "console_title_template": "{{ if .Root }}⚡ {{ end }}{{ .UserName }} ➔ {{ .Folder }}",
   "final_space": true,
   "palette": {
     "git-changed": "#F2E5A5",
     "git-conflict": "#F78C6C",
     "git-nice": "#D7F2A5",
     "git-remote": "#b6a5f2",
-    "path": "#ddacd5",
+    "os": "#cae1f4",
+    "path": "#f4cae0",
     "red": "#F55C54",
     "status": "#CA9BE9",
     "text-dark": "#011627",
