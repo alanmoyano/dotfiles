@@ -63,7 +63,7 @@
           "background_templates": [
             "{{ if gt .Code 0 }}p:red{{end}}"
           ],
-          "foreground": "p:text-light",
+          "foreground": "p:text-dark",
           "leading_diamond": "\ue0b6",
           "properties": {
             "always_enabled": true
@@ -75,7 +75,7 @@
         },
         {
           "background": "p:time",
-          "foreground": "p:text-light",
+          "foreground": "p:text-dark",
           "properties": {
             "style": "amarillo",
             "threshold": 5
@@ -96,13 +96,13 @@
     "git-conflict": "#F78C6C",
     "git-nice": "#D7F2A5",
     "git-remote": "#b6a5f2",
-    "os": "#cae1f4",
+    "os": "#cadbf4",
     "path": "#f4cae0",
-    "red": "#F55C54",
-    "status": "#CA9BE9",
+    "red": "#f5635c",
+    "status": "#eea880",
     "text-dark": "#011627",
     "text-light": "#FCF6F6",
-    "time": "#8E819C"
+    "time": "#b8bae6"
   },
   "version": 2
 }
