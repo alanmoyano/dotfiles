@@ -1,0 +1,64 @@
+# Get editor completions based on the config schema
+"$schema" = ""
+
+# Inserts a blank line between shell prompts
+add_newline = false
+
+format = "$os $directory $git_branch $git_status $cmd_duration"
+
+palette = "alan"
+
+[palettes.alan]
+os = "#cadbf4"
+git-changed = "#F2E5A5"
+git-conflict = "#F78C6C"
+git-nice = "#D7F2A5"
+git-remote = "#b6a5f2"
+path = "#f4cae0"
+red = "#f5635c"
+status = "#eea880"
+text-dark = "#011627"
+text-light = "#FCF6F6"
+time = "#b8bae6"
+
+[os]
+symbols = { Debian = " \ue77d ", Ubuntu = " \ue73a ", Windows = " \uE62A " }
+style = "fg:text-light"
+disabled = false
+
+[directory]
+style = "fg:text-light"
+format = "in [$path]($style)"
+truncation_length = 3
+truncation_symbol = ""
+truncate_to_repo = false
+
+
+[directory.substitutions]
+"~/.config" = "\uf013"
+"\\\\wsl.localhost\\Ubuntu" = "Ubuntu"
+"\\\\wsl.localhost\\Debian" = "Debian"
+
+[git_branch]
+symbol = "\ue725 "
+format = "[on $symbol$branch]($style)"
+style = "fg:text-light"
+
+[git_status]
+format = "[$all_status]($style)"
+style = "fg:text-light"
+
+untracked = '?$count '
+modified = '~$count '
+deleted = '-$count '
+staged = '+$count '
+
+stashed = '📦'
+
+windows_starship = "/mnt/c/Program Files/starship/bin/starship.exe"
+
+[cmd_duration]
+disabled = false
+show_milliseconds = true
+style = "fg:text-light"
+min_time = 5
