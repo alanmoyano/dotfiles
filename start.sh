@@ -4,9 +4,7 @@ sudo apt install nala -y
 
 # Instalando todos los programas
 sudo nala install zsh tldr btop gh unzip exa fzf ripgrep curl neovim bat -y
-
-# Llenando el TLDR
-tldr -u
+sudo nala upgrade -y
 
 # Oh My Posh
 mkdir $HOME/.oh-my-posh
@@ -26,6 +24,7 @@ alias l="ls -lah"
 alias lt="ll -TL=2"' > ~/.zshrc
 
 # Poniendo zsh como shell
-chsh -s /bin/zsh
+sudo chsh -s /bin/zsh $(whoami)
 
+clear
 echo "Reiniciar la terminal para aplicar los cambios"
