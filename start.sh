@@ -4,7 +4,7 @@ sudo apt install nala -y
 
 # Actualizando e instalando todos los programas
 sudo nala upgrade -y
-sudo nala install zsh tldr btop gh unzip exa fzf ripgrep curl neovim bat -y
+sudo nala install zsh tldr btop gh unzip exa fzf ripgrep curl neovim bat keychain -y
 
 # Oh My Posh
 mkdir $HOME/.oh-my-posh
