@@ -3,6 +3,8 @@ sudo apt install nala -y
 
 sudo nala install zsh tldr btop gh unzip exa fzf ripgrep curl neovim -y
 
+export PATH="$PATH:/$HOME/.oh-my-posh"
+
 # Oh My Posh
 mkdir $HOME/.oh-my-posh
 curl -s https://ohmyposh.dev/install.sh | bash -s -- -d $HOME/.oh-my-posh/
