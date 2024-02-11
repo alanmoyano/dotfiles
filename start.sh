@@ -1,9 +1,12 @@
+# Listando actualizaciones e instalando Nala
 sudo apt update
 sudo apt install nala -y
 
-sudo nala install zsh tldr btop gh unzip exa fzf ripgrep curl neovim -y
+# Instalando todos los programas
+sudo nala install zsh tldr btop gh unzip exa fzf ripgrep curl neovim bat -y
 
-export PATH="$HOME/.oh-my-posh:$PATH"
+# Llenando el TLDR
+tldr -u
 
 # Oh My Posh
 mkdir $HOME/.oh-my-posh
@@ -22,4 +25,7 @@ alias ll="ls -l"
 alias l="ls -lah"
 alias lt="ll -TL=2"' > ~/.zshrc
 
-source ~/.zshrc
+# Poniendo zsh como shell
+chsh -s /bin/zsh
+
+echo "Reiniciar la terminal para aplicar los cambios"
