@@ -1,3 +1,0 @@
-nala 
-zsh tldr btop gh unzip exa peco fzf
-bun
