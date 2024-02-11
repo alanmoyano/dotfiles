@@ -1,13 +1,12 @@
 sudo apt update
 sudo apt install nala -y
 
-sudo nala install zsh tldr btop gh unzip exa fzf ripgrep curl nvim -y
+sudo nala install zsh tldr btop gh unzip exa fzf ripgrep curl neovim -y
 
 # Oh My Posh
+mkdir $HOME/.oh-my-posh
 curl -s https://ohmyposh.dev/install.sh | bash -s -- -d $HOME/.oh-my-posh/
-
-# Tema de Oh My Posh
-curl -s https://raw.githubusercontent.com/alanmoyano/dotfiles/main/alan.omp.json > $HOME/.oh-my-posh/alan.omp.json
+curl -s https://raw.githubusercontent.com/alanmoyano/dotfiles/main/alan.omp.json > $HOME/.oh-my-posh/
 
 # Exportando el .zshrc
 echo '# Oh My Posh
