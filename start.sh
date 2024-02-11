@@ -12,6 +12,7 @@ curl -s https://raw.githubusercontent.com/alanmoyano/dotfiles/main/alan.omp.json
 
 # Exportando el .zshrc
 echo '# Oh My Posh
+export PATH="$HOME/.oh-my-posh:$PATH"
 eval "$(oh-my-posh init zsh --config ~/.oh-my-posh/alan.omp.json)"
 
 # Alias
