@@ -11,6 +11,8 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
+source $ZSH/oh-my-zsh.sh
+
 # Alias
 alias cls=clear
 alias ls="exa --icons"
@@ -18,8 +20,6 @@ alias ll="ls -l"
 alias l="ls -lah"
 alias lt="ll -TL=2"
 alias bat="batcat --paging=never"
-
-source $ZSH/oh-my-zsh.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
