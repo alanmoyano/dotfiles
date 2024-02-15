@@ -18,7 +18,6 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 
 # Exportando el .zshrc
 curl https://raw.githubusercontent.com/alanmoyano/dotfiles/main/.zshrc >~/.zshrc
-curl https://raw.githubusercontent.com/alanmoyano/dotfiles/main/.p10k.zsh >~/.p10k.zsh
 
 # Poniendo zsh como shell
 sudo chsh -s /bin/zsh $(whoami)
