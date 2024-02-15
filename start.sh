@@ -13,30 +13,12 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
 # Exportando el .zshrc
-echo 'if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
-export ZSH="$HOME/.oh-my-zsh"
-
-ZSH_THEME="powerlevel10k/powerlevel10k"
-
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
-
-# Alias
-alias cls=clear
-alias ls="exa --icons"
-alias ll="ls -l"
-alias l="ls -lah"
-alias lt="ll -TL=2"
-alias bat="batcat --paging=never"
-
-source $ZSH/oh-my-zsh.sh
-
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh' >~/.zshrc
+curl https://raw.githubusercontent.com/alanmoyano/dotfiles/main/.zshrc >~/.zshrc
+curl https://raw.githubusercontent.com/alanmoyano/dotfiles/main/.p10k.zsh >~/.p10k.zsh
 
 # Poniendo zsh como shell
 sudo chsh -s /bin/zsh $(whoami)
 
+# Terminando
 clear
 echo "Reiniciar la terminal para aplicar los cambios"
