@@ -13,11 +13,14 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 git clone --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 git clone --depth=1 https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
+# Configuración de Zsh
+curl https://raw.githubusercontent.com/alanmoyano/dotfiles/main/.zshrc >~/.zshrc
+
 # Powerlevel10k
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
-# Exportando el .zshrc
-curl https://raw.githubusercontent.com/alanmoyano/dotfiles/main/.zshrc >~/.zshrc
+# Configuración del Powerlevel10k
+curl https://raw.githubusercontent.com/alanmoyano/dotfiles/main/.p10k.zsh >~/.p10k.zsh
 
 # Poniendo zsh como shell
 sudo chsh -s /bin/zsh $(whoami)
