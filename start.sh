@@ -26,5 +26,4 @@ curl https://raw.githubusercontent.com/alanmoyano/dotfiles/main/.p10k.zsh >~/.p1
 sudo chsh -s /bin/zsh $(whoami)
 
 # Terminando
-clear
-echo "Reiniciar la terminal para aplicar los cambios"
+exec zsh
