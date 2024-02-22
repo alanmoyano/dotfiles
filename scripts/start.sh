@@ -48,6 +48,7 @@ curl https://raw.githubusercontent.com/alanmoyano/dotfiles/main/starship.toml > 
 
 # Haciendo los enlaces para anden las cosas
 sudo ln -s /home/linuxbrew/.linuxbrew/bin/zsh /bin/zsh
+rm ~/.zshrc
 ln -s ~/.zsh/.zshrc ~/.zshrc
 
 # Poniendo zsh como shell por defecto
