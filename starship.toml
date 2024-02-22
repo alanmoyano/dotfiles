@@ -37,18 +37,19 @@ style = "bold pink"
 [git_status]
 format = "[$all_status$ahead_behind]($style)"
 
-untracked = '?$count '
-modified = '~$count '
-deleted = '-$count '
-staged = '+$count '
+untracked = "?$count "
+modified = "~$count "
+renamed = "»$count "
+deleted = "-$count "
+staged = "+$count "
 
 diverged = "⇕$count "
 ahead = "⇡$count "
 behind = "⇣$count "
 
-stashed = '📦$count '
+stashed = "📦$count "
 
 windows_starship = "/mnt/c/Program Files/starship/bin/starship.exe"
 
 [cmd_duration]
-min_time = 10
+min_time = 50

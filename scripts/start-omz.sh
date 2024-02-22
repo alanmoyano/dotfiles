@@ -4,7 +4,7 @@ sudo apt install nala -y
 
 # Actualizando e instalando todos los programas
 sudo nala upgrade -y
-sudo nala install zsh tldr btop gh unzip exa fzf ripgrep curl wget git neovim bat keychain -y
+sudo nala install zsh tldr btop gh unzip fzf ripgrep curl wget git neovim -y
 
 # Oh My Zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
