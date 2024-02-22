@@ -8,9 +8,9 @@ sudo nala upgrade -y
 # Instalando Homebrew
 NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
+# Añadiendolo al path
+echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> .bashrc
+echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> .zshrc
+
 # Instalando todo
 brew install gcc gh fzf wget curl git tlrc neovim ripgrep unzip btop zsh
-
-echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' > .zshrc
-
-exec zsh
