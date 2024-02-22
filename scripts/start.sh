@@ -23,7 +23,7 @@ export PATH="/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:$PAT
 NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # Instalando todo
-brew install -q gcc gh fzf wget curl git tlrc neovim ripgrep unzip btop zsh bat starship eza
+brew install gcc gh fzf wget curl git tlrc neovim ripgrep unzip btop zsh bat starship eza
 
 # Activando los bindings de fzf
 /home/linuxbrew/.linuxbrew/opt/fzf/install --all 
