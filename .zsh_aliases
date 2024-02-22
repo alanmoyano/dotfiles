@@ -1,0 +1,8 @@
+#!/bin/zsh
+
+alias cls=clear
+alias ls="eza --icons"
+alias ll="ls -lh --total-size"
+alias l="ll -a"
+alias lt="ll -TL=2"
+alias bat="bat --paging=never"

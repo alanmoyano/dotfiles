@@ -1,25 +1,31 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+#!/bin/zsh
 
-export ZSH="$HOME/.oh-my-zsh"
+# Estableciendo cual será el directorio en el que guardar todas la configuraciones de zsh
+export ZSH_CONFIG=~/.zsh
 
-ZSH_THEME="powerlevel10k/powerlevel10k"
+# Configurando el historial
+export HISTSIZE=1000
+export SAVEHIST=1000
+export HISTFILE=$ZSH_CONFIG/.zsh_history
 
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+# Cargando los binds
+source $ZSH_CONFIG/.zsh_binds
+# Cargando los alias
+source $ZSH_CONFIG/.zsh_aliases
 
-source $ZSH/oh-my-zsh.sh
+# Configuando fzf
+export FZF_DEFAULT_OPTS="--preview '~/fzf-preview.sh {}' --cycle"
+export FZF_CTRL_R_OPTS="--preview-window=hidden"
 
-# Alias
-alias cls=clear
-alias ls="exa --icons"
-alias ll="ls -l"
-alias l="ls -lah"
-alias lt="ll -TL=2"
-alias bat="batcat --paging=never"
+# Cargando los bindings de fzf
+[ -f $ZSH_CONFIG/.fzf.zsh ] && source $ZSH_CONFIG/.fzf.zsh
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# Cargando los plugins 
+source $ZSH_CONFIG/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $ZSH_CONFIG/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# Añadiendo Homebrew al path
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+# Iniciando el prompt
+eval "$(starship init zsh)"
