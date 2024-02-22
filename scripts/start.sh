@@ -35,6 +35,7 @@ mv ~/.fzf.zsh $ZSH_CONFIG/.fzf.zsh
 
 # Descargando el script de preview para fzf
 curl https://raw.githubusercontent.com/alanmoyano/dotfiles/main/.fzf-preview.sh > ~/.fzf-preview.sh
+chmod +x ~/.fzf-preview.sh
 
 # Instalando los plugins de zsh
 git clone --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting $ZSH_CONFIG/zsh-syntax-highlighting
