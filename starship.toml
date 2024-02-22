@@ -31,7 +31,13 @@ untracked = '?$count '
 modified = '~$count '
 deleted = '-$count '
 staged = '+$count '
-stashed = '📦'
+
+diverged = "⇕$count "
+ahead = "⇡$count "
+behind = "⇣$count "
+
+
+stashed = '📦$count '
 
 windows_starship = "/mnt/c/Program Files/starship/bin/starship.exe"
 
