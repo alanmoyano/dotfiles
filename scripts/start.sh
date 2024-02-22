@@ -20,7 +20,7 @@ export PATH="/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:$PAT
 NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # Instalando todo
-brew install -q gcc gh fzf wget curl git tlrc neovim ripgrep unzip btop zsh bat
+brew install -q gcc gh fzf wget curl git tlrc neovim ripgrep unzip btop zsh bat starship
 
 # Activando los bindings de fzf
 /home/linuxbrew/.linuxbrew/opt/fzf/install --all 
@@ -29,13 +29,15 @@ brew install -q gcc gh fzf wget curl git tlrc neovim ripgrep unzip btop zsh bat
 mv ~/.fzf.zsh $ZSH_CONFIG/.fzf.zsh
 
 # Instalando los plugins de zsh
-git clone --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CONFIG
-git clone --depth=1 https://github.com/zsh-users/zsh-autosuggestions $ZSH_CONFIG
+git clone --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting $ZSH_CONFIG/zsh-syntax-highlighting
+git clone --depth=1 https://github.com/zsh-users/zsh-autosuggestions $ZSH_CONFIG/zsh-autosuggestions
 
 # Configuración de Zsh
 curl https://raw.githubusercontent.com/alanmoyano/dotfiles/main/.zshrc > $ZSH_CONFIG/.zshrc
 curl https://raw.githubusercontent.com/alanmoyano/dotfiles/main/.zsh_aliases > $ZSH_CONFIG/.zsh_aliases
 curl https://raw.githubusercontent.com/alanmoyano/dotfiles/main/.zsh_binds > $ZSH_CONFIG/.zsh_binds
+
+sudo ln -s /home/linuxbrew/.linuxbrew/bin/zsh /bin/zsh
 
 # Poniendo zsh como shell por defecto
 sudo chsh -s /bin/zsh $(whoami)
