@@ -18,6 +18,8 @@ sudo nala upgrade -y
 
 # Añadiendo Homebrew al path
 export PATH="/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:$PATH" 
+echo 'export PATH="/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:$PATH"' >> .bashrc
+source .bashrc
 
 # Instalando Homebrew
 NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
