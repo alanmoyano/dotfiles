@@ -25,7 +25,7 @@ read_only = ""
 symbol = "\ue725 "
 
 [git_status]
-format = "[$all_status]($style)"
+format = "[$all_status$ahead_behind]($style)"
 
 untracked = '?$count '
 modified = '~$count '
