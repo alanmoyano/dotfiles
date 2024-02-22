@@ -16,3 +16,10 @@ bindkey "^[[3;5~" delete-word
 
 # Bindear el ctrl + delete para borrar palabras
 bindkey "^H" backward-delete-word
+
+# Bindear el inicio y el fin para moverse entre palabras
+bindkey "^[[H" beginning-of-line
+bindkey "^[[F" end-of-line
+
+# Bindear el supr para borrar palabras
+bindkey "^[[3~" delete-char
