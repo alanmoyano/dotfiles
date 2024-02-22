@@ -14,7 +14,7 @@ source $ZSH_CONFIG/.zsh_binds
 source $ZSH_CONFIG/.zsh_aliases
 
 # Configuando fzf
-export FZF_DEFAULT_OPTS="--preview '~/fzf-preview.sh {}' --cycle"
+export FZF_DEFAULT_OPTS="--preview '~/.fzf-preview.sh {}' --cycle"
 export FZF_CTRL_R_OPTS="--preview-window=hidden"
 
 # Cargando los bindings de fzf
