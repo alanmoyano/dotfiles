@@ -12,5 +12,8 @@ NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Ho
 echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> .bashrc
 echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> .zshrc
 
+source .bashrc
+source .zshrc
+
 # Instalando todo
 brew install gcc gh fzf wget curl git tlrc neovim ripgrep unzip btop zsh
