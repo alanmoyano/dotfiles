@@ -2,6 +2,15 @@
 
 add_newline = false
 
+palette = "alan"
+
+[palettes.alan]
+pink = "#FA88AA"
+red = "#FF5050"
+cyan = "#87FAF0"
+yellow = "#FAEB87"
+violet = "#52154E"
+
 [character]
 success_symbol = '[➜](bold green)'
 error_symbol = '[➜](bold red)'
@@ -23,6 +32,7 @@ read_only = ""
 
 [git_branch]
 symbol = "\ue725 "
+style = "bold pink"
 
 [git_status]
 format = "[$all_status$ahead_behind]($style)"
@@ -35,7 +45,6 @@ staged = '+$count '
 diverged = "⇕$count "
 ahead = "⇡$count "
 behind = "⇣$count "
-
 
 stashed = '📦$count '
 
