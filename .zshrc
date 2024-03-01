@@ -20,7 +20,7 @@ export FZF_CTRL_R_OPTS="--preview-window=hidden"
 # Cargando los bindings de fzf
 [ -f $ZSH_CONFIG/.fzf.zsh ] && source $ZSH_CONFIG/.fzf.zsh
 
-# Cargando los plugins 
+# Cargando los plugins
 source $ZSH_CONFIG/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $ZSH_CONFIG/zsh-autosuggestions/zsh-autosuggestions.zsh
 

@@ -17,8 +17,8 @@ sudo apt install nala -y
 sudo nala upgrade -y
 
 # Añadiendo Homebrew al path
-export PATH="/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:$PATH" 
-echo 'export PATH="/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:$PATH"' >> .bashrc
+export PATH="/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:$PATH"
+echo 'export PATH="/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:$PATH"' >>.bashrc
 source .bashrc
 
 # Instalando Homebrew
@@ -28,13 +28,13 @@ NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Ho
 brew install gcc gh fzf wget curl git tlrc neovim ripgrep unzip btop zsh bat starship eza file
 
 # Activando los bindings de fzf
-/home/linuxbrew/.linuxbrew/opt/fzf/install --all 
+/home/linuxbrew/.linuxbrew/opt/fzf/install --all
 
 # Moviendo el archivo de fzf a la carpeta ZSH_CONFIG
 mv ~/.fzf.zsh $ZSH_CONFIG/.fzf.zsh
 
 # Descargando el script de preview para fzf
-curl https://raw.githubusercontent.com/alanmoyano/dotfiles/main/.fzf-preview.sh > ~/.fzf-preview.sh
+curl https://raw.githubusercontent.com/alanmoyano/dotfiles/main/.fzf-preview.sh >~/.fzf-preview.sh
 chmod +x ~/.fzf-preview.sh
 
 # Instalando los plugins de zsh
@@ -42,15 +42,15 @@ git clone --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting $ZSH_CO
 git clone --depth=1 https://github.com/zsh-users/zsh-autosuggestions $ZSH_CONFIG/zsh-autosuggestions
 
 # Configuración de Zsh
-curl https://raw.githubusercontent.com/alanmoyano/dotfiles/main/.zshrc > $ZSH_CONFIG/.zshrc
-curl https://raw.githubusercontent.com/alanmoyano/dotfiles/main/.zsh_aliases > $ZSH_CONFIG/.zsh_aliases
-curl https://raw.githubusercontent.com/alanmoyano/dotfiles/main/.zsh_binds > $ZSH_CONFIG/.zsh_binds
+curl https://raw.githubusercontent.com/alanmoyano/dotfiles/main/.zshrc >$ZSH_CONFIG/.zshrc
+curl https://raw.githubusercontent.com/alanmoyano/dotfiles/main/.zsh_aliases >$ZSH_CONFIG/.zsh_aliases
+curl https://raw.githubusercontent.com/alanmoyano/dotfiles/main/.zsh_binds >$ZSH_CONFIG/.zsh_binds
 
 # Creando el directorio para la configuración del prompt
 mkdir -p ~/.config
 
 # Configuración del prompt
-curl https://raw.githubusercontent.com/alanmoyano/dotfiles/main/starship.toml > ~/.config/starship.toml
+curl https://raw.githubusercontent.com/alanmoyano/dotfiles/main/starship.toml >~/.config/starship.toml
 
 # Haciendo los enlaces para anden las cosas
 sudo ln -s /home/linuxbrew/.linuxbrew/bin/zsh /bin/zsh
@@ -59,6 +59,10 @@ ln -s ~/.zsh/.zshrc ~/.zshrc
 
 # Poniendo zsh como shell por defecto
 sudo chsh -s /bin/zsh $(whoami)
+export SHELL=/bin/zsh
+
+# Instalando Bun
+curl -fsSL https://bun.sh/install | bash
 
 # Terminando
 exec zsh
