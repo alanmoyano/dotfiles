@@ -14,8 +14,10 @@ source $ZSH_CONFIG/.zsh_binds
 source $ZSH_CONFIG/.zsh_aliases
 
 # Configuando fzf
-export FZF_DEFAULT_OPTS="--preview '~/.fzf-preview.sh {}' --cycle"
+export FZF_DEFAULT_COMMAND="fd --type f --strip-cwd-prefix --hidden"
+export FZF_DEFAULT_OPTS="--preview '~/.fzf-preview.sh {}' --cycle --bind=ctrl-p:toggle-preview"
 export FZF_CTRL_R_OPTS="--preview-window=hidden"
+export FZF_CTRL_T_COMMAND="fd --hidden"
 
 # Cargando los bindings de fzf
 [ -f $ZSH_CONFIG/.fzf.zsh ] && source $ZSH_CONFIG/.fzf.zsh
@@ -26,6 +28,9 @@ source $ZSH_CONFIG/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Añadiendo Homebrew al path
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+# Configurando Chrome (de Windows) como el navegador por defecto
+export BROWSER="/mnt/c/Program\ Files/Google/Chrome/Application/chrome.exe"
 
 # Iniciando el prompt
 eval "$(starship init zsh)"
