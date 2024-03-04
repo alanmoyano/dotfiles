@@ -16,6 +16,9 @@ sudo apt install nala -y
 # Actualizando básicos
 sudo nala upgrade -y
 
+# Instalando build-essential
+sudo nala install build-essential -y
+
 # Añadiendo Homebrew al path
 export PATH="/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:$PATH"
 echo 'export PATH="/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:$PATH"' >>.bashrc
@@ -25,7 +28,7 @@ source .bashrc
 NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # Instalando todo
-brew install gcc gh fzf wget curl git tlrc neovim ripgrep unzip btop zsh bat starship eza file fd
+brew install gh fzf wget curl git tlrc neovim ripgrep unzip btop zsh bat starship eza file fd
 
 # Activando los bindings de fzf
 /home/linuxbrew/.linuxbrew/opt/fzf/install --all
