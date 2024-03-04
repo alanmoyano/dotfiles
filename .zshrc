@@ -19,7 +19,7 @@ export FZF_DEFAULT_OPTS="--preview '~/.fzf-preview.sh {}' --cycle --bind=ctrl-p:
 export FZF_CTRL_R_OPTS="--preview-window=hidden"
 export FZF_CTRL_T_COMMAND="fd --hidden"
 
-# Cargando los bindings y autocomplete de fzf
+# Cargando los bindings y completions de fzf
 [ -f $ZSH_CONFIG/.fzf.zsh ] && source $ZSH_CONFIG/.fzf.zsh
 
 # Cargando los plugins
@@ -31,6 +31,22 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # Configurando Chrome (de Windows) como el navegador por defecto
 export BROWSER="/mnt/c/Program\ Files/Google/Chrome/Application/chrome.exe"
+
+# Activando las completions de Bun
+[ -s "/home/alan/.bun/_bun" ] && source "/home/alan/.bun/_bun"
+
+# Añadiendo Bun al path
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# Configurando nvm
+export NVM_DIR="$HOME/.nvm"
+
+# Activando nvm
+[ -s "/home/linuxbrew/.linuxbrew/opt/nvm/nvm.sh" ] && \. "/home/linuxbrew/.linuxbrew/opt/nvm/nvm.sh"  
+
+# Activando las completions de nvm
+[ -s "/home/linuxbrew/.linuxbrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/home/linuxbrew/.linuxbrew/opt/nvm/etc/bash_completion.d/nvm"  
 
 # Iniciando el prompt
 eval "$(starship init zsh)"
