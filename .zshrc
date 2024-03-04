@@ -19,7 +19,7 @@ export FZF_DEFAULT_OPTS="--preview '~/.fzf-preview.sh {}' --cycle --bind=ctrl-p:
 export FZF_CTRL_R_OPTS="--preview-window=hidden"
 export FZF_CTRL_T_COMMAND="fd --hidden"
 
-# Cargando los bindings de fzf
+# Cargando los bindings y autocomplete de fzf
 [ -f $ZSH_CONFIG/.fzf.zsh ] && source $ZSH_CONFIG/.fzf.zsh
 
 # Cargando los plugins

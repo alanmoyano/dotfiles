@@ -33,7 +33,7 @@ brew install gh fzf wget curl git tlrc neovim ripgrep unzip btop zsh bat starshi
 # Creando el directorio para que nvm anda
 mkdir -p ~/.nvm
 
-# Activando los bindings de fzf
+# Activando los bindings y autocomplete de fzf
 /home/linuxbrew/.linuxbrew/opt/fzf/install --all
 
 # Moviendo el archivo de fzf a la carpeta ZSH_CONFIG
