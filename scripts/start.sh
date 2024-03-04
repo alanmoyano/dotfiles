@@ -28,7 +28,10 @@ source .bashrc
 NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # Instalando todo
-brew install gh fzf wget curl git tlrc neovim ripgrep unzip btop zsh bat starship eza file fd
+brew install gh fzf wget curl git tlrc neovim ripgrep unzip btop zsh bat starship eza file fd nvm
+
+# Creando el directorio para que nvm anda
+mkdir -p ~/.nvm
 
 # Activando los bindings de fzf
 /home/linuxbrew/.linuxbrew/opt/fzf/install --all
