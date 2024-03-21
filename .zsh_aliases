@@ -1,5 +1,7 @@
 #!/bin/zsh
 
+unalias run-help
+unalias which-command
 alias cls=clear
 alias ls="eza --icons=always"
 alias ll="ls -lh --total-size"
