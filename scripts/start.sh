@@ -33,15 +33,9 @@ brew install gh fzf wget curl git tlrc neovim ripgrep unzip btop zsh bat starshi
 # Creando el directorio para que nvm anda
 mkdir -p ~/.nvm
 
-# Activando los bindings y autocomplete de fzf
-/home/linuxbrew/.linuxbrew/opt/fzf/install --all
-
-# Moviendo el archivo de fzf a la carpeta ZSH_CONFIG
-mv ~/.fzf.zsh $ZSH_CONFIG/.fzf.zsh
-
 # Descargando el script de preview para fzf
-curl https://raw.githubusercontent.com/alanmoyano/dotfiles/main/.fzf-preview.sh >~/.fzf-preview.sh
-chmod +x ~/.fzf-preview.sh
+curl https://raw.githubusercontent.com/alanmoyano/dotfiles/main/.fzf-preview.sh > $ZSH_CONFIG/.fzf-preview.sh
+chmod +x $ZSH_CONFIG/.fzf-preview.sh
 
 # Instalando los plugins de zsh
 git clone --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting $ZSH_CONFIG/zsh-syntax-highlighting

@@ -17,7 +17,7 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 # Configuando fzf
 export FZF_DEFAULT_COMMAND="fd --type f --strip-cwd-prefix --hidden"
-export FZF_DEFAULT_OPTS="--preview '~/.fzf-preview.sh {}' --cycle --bind=ctrl-p:toggle-preview"
+export FZF_DEFAULT_OPTS="--preview '$ZSH_CONFIG/.fzf-preview.sh {}' --cycle --bind=ctrl-p:toggle-preview"
 export FZF_CTRL_R_OPTS="--preview-window=hidden"
 export FZF_CTRL_T_COMMAND="fd --hidden"
 
@@ -33,7 +33,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$ZSH_CONFIG/.zsh_aliases" ] && source $ZSH_CONFIG/.zsh_aliases
 
 # Cargando los bindings y completions de fzf
-[ -f $ZSH_CONFIG/.fzf.zsh ] && source $ZSH_CONFIG/.fzf.zsh
+eval "$(fzf --zsh)"
 
 # Cargando los plugins
 [ -s "$ZSH_CONFIG/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ] && source $ZSH_CONFIG/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
