@@ -29,6 +29,7 @@ read_only = ""
 
 [directory.substitutions]
 "~/.config" = "\uf013"
+"/mnt/c" = "\uE62A"
 
 [git_branch]
 symbol = "\ue725 "
