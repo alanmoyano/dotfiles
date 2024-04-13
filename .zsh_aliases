@@ -8,6 +8,7 @@ alias ll="ls -lh --total-size"
 alias l="ll -a"
 alias lt="ll -TL=2"
 alias bat="bat --paging=never"
+alias rf="rm -rf"
 alias g=git
 alias ga="git add"
 alias gc="git commit -m"
