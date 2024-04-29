@@ -1,8 +1,5 @@
 #!/bin/zsh
 
-# Añadiendo Homebrew al path
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-
 # Estableciendo cual será el directorio en el que guardar todas la configuraciones de zsh
 export ZSH_CONFIG=~/.zsh
 
@@ -22,10 +19,7 @@ export FZF_CTRL_R_OPTS="--preview-window=hidden"
 export FZF_CTRL_T_COMMAND="fd --hidden"
 
 # Configurando Chrome (de Windows) como el navegador por defecto
-export BROWSER="/mnt/c/Program\ Files/Google/Chrome/Application/chrome.exe"
-
-# Configurando nvm
-export NVM_DIR="$HOME/.nvm"
+export BROWSER="$(which firefox)"
 
 # Cargando los binds
 [ -s "$ZSH_CONFIG/.zsh_binds" ] && source $ZSH_CONFIG/.zsh_binds
@@ -41,12 +35,6 @@ eval "$(fzf --zsh)"
 
 # Activando las completions de Bun
 [ -s "/home/alan/.bun/_bun" ] && source "/home/alan/.bun/_bun"
-
-# Activando nvm
-[ -s "/home/linuxbrew/.linuxbrew/opt/nvm/nvm.sh" ] && source "/home/linuxbrew/.linuxbrew/opt/nvm/nvm.sh"  
-
-# Activando las completions de nvm
-[ -s "/home/linuxbrew/.linuxbrew/opt/nvm/etc/bash_completion.d/nvm" ] && source "/home/linuxbrew/.linuxbrew/opt/nvm/etc/bash_completion.d/nvm"  
 
 # Iniciando el prompt
 eval "$(starship init zsh)"
