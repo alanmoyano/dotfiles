@@ -1,0 +1,31 @@
+import = ["~/.config/alacritty/catppuccin-mocha.toml"]
+
+[font]
+size = 13
+
+[font.normal]
+family = "CaskaydiaMono NFM"
+style = "Regular"
+
+[window]
+opacity = 0.9
+position = { x = 150, y = 150 }
+padding = { x = 7, y = 7 }
+dynamic_title = true
+
+[selection]
+save_to_clipboard = true
+
+[cursor]
+style = { shape = "Beam", blinking = "Off" }
+unfocused_hollow = false
+
+[mouse]
+bindings = [
+{ mouse = "Right", mods = "Control", action = "Paste" },
+]
+
+[keyboard]
+bindings = [
+{ key = "V", mods = "Control", action = "Paste" }
+]

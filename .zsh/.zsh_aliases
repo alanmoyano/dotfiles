@@ -1,0 +1,26 @@
+#!/bin/zsh
+
+# Eliminando alias por defecto de zsh
+[ `alias | grep run-help` ] && unalias run-help
+[ `alias | grep which-command` ] && unalias which-command
+
+# Básicos
+alias cls=clear
+alias ls="eza --icons=always --gitignore"
+alias ll="ls -lh --total-size"
+alias l="ll -a"
+alias lt="l -T"
+alias llt="ll -T"
+alias bat="bat --paging=never"
+alias rf="rm -rf"
+alias neofetch="fastfetch --config neofetch"
+
+# Git
+alias g=git
+alias ga="git add"
+alias gc="git commit -m"
+alias gpll="git pull"
+alias gpsh="git push"
+alias gs="git status"
+alias gd="git diff"
+alias gf="git fetch"

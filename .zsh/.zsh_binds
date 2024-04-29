@@ -1,0 +1,25 @@
+#!/bin/zsh
+
+# Bindear el ctrl + flecha para moverse entre palabras
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
+
+# Bindear el alt + flecha para moverse entre palabras
+bindkey "^[[1;3C" forward-word
+bindkey "^[[1;3D" backward-word
+
+# Bindear el ctrl + supr para borrar palabras
+bindkey "^[[3;3~" delete-word
+
+# Bindear el alt + supr para borrar palabras
+bindkey "^[[3;5~" delete-word
+
+# Bindear el ctrl + delete para borrar palabras
+bindkey "^H" backward-delete-word
+
+# Bindear el inicio y el fin para moverse entre palabras
+bindkey "^[[H" beginning-of-line
+bindkey "^[[F" end-of-line
+
+# Bindear el supr para borrar palabras
+bindkey "^[[3~" delete-char
