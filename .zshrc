@@ -21,6 +21,10 @@ export FZF_CTRL_T_COMMAND="fd --hidden"
 # Configurando Chrome (de Windows) como el navegador por defecto
 export BROWSER="$(which firefox)"
 
+# Activando el autocomplete case insensitive
+autoload -Uz compinit && compinit
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+
 # Cargando los binds
 [ -s "$ZSH_CONFIG/.zsh_binds" ] && source $ZSH_CONFIG/.zsh_binds
 # Cargando los alias
@@ -28,6 +32,13 @@ export BROWSER="$(which firefox)"
 
 # Cargando los bindings y completions de fzf
 eval "$(fzf --zsh)"
+
+# Activando Homebrew
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+# Activando fnm
+eval "$(fnm env --use-on-cd)"
+eval "$(fnm completions --shell zsh)"
 
 # Cargando los plugins
 [ -s "$ZSH_CONFIG/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ] && source $ZSH_CONFIG/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
