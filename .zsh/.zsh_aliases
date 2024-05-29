@@ -6,8 +6,8 @@
 
 # Básicos
 alias cls=clear
-alias ls="eza --icons=always --git"
-alias ll="ls -lh --total-size"
+alias ls="eza --icons=always"
+alias ll="ls -lh --git"
 alias l="ll -a"
 alias llt="ll -TL=2 --git-ignore"
 alias lt="l -TL=2 --git-ignore"
