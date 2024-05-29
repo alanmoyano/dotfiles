@@ -22,7 +22,8 @@
             "mapped_locations": {
               "\\\\wsl.localhost\\Ubuntu\\": "Ubuntu"
             },
-            "style": "full"
+            "style": "agnoster_short",
+            "max_depth": 3
           },
           "style": "diamond",
           "template": " \uf07b {{ .Path }} ",
