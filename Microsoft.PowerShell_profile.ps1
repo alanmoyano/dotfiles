@@ -18,9 +18,9 @@ Set-ProfileAlias rf "rm -Recurse -Force #{*}" -Bash -Force > nul
 
 # Alias del ls
 Set-ProfileAlias ls "eza --icons=always #{*}" -Bash -Force > nul
-Set-ProfileAlias ll "eza --icons=always -lh #{*}" -Bash -Force > nul
-Set-ProfileAlias lt "eza --icons=always -lhTL=2 #{*}" -Bash -Force > nul
-Set-ProfileAlias l "eza --icons=always -lah #{*}" -Bash -Force > nul
+Set-ProfileAlias ll "eza --icons=always -lh --git #{*}" -Bash -Force > nul
+Set-ProfileAlias lt "eza --icons=always -lhTL=2 --git #{*}" -Bash -Force > nul
+Set-ProfileAlias l "eza --icons=always -lah --git #{*}" -Bash -Force > nul
 
 # Alias de Git
 Set-Alias gg git
@@ -45,3 +45,5 @@ function .dot(){
 function .lnx(){
 	Set-Location \\wsl.localhost\Ubuntu\home\alan
 }
+
+fnm env --use-on-cd | Out-String | Invoke-Expression
